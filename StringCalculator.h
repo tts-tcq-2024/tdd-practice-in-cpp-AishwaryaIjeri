@@ -1,19 +1,15 @@
-#ifndef STRING_CALCULATOR_H
-#define STRING_CALCULATOR_H
+#ifndef STRINGCALCULATOR_H
+#define STRINGCALCULATOR_H
 
 #include <string>
-#include <vector>
-#include <stdexcept>
 
 class StringCalculator {
 public:
-    static int Add(const std::string& numbers);
-
-private:
-    static std::vector<int> parseNumbers(const std::string& input);
-    static void validateNumbers(const std::vector<int>& numbers);
-    static std::string extractDelimiter(const std::string& input);
-    static std::string removeDelimiterLine(const std::string& input);
+    int add(const std::string& input);
+    int addofnum(const std::string& input);
+    void verify_NegativeNum(const std::string& input);
+    std::string normalizeDelimiters(const std::string& input);
+    std::string newlinecheck(const std::string& input);
 };
 
-#endif // STRING_CALCULATOR_H
+#endif
